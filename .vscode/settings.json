@@ -1,0 +1,4 @@
+{
+    "npm.autoDetect": "off",
+    "prettier.arrowParens": "always"
+}
