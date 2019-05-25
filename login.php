@@ -6,7 +6,6 @@ require_once('Connect/connect.php');
 $_SESSION['errorMessage'] = '';
 $password = htmlspecialchars($_POST['password'], ENT_QUOTES);
 $login = htmlspecialchars($_POST['login'], ENT_QUOTES);
-//$password = password_hash(htmlspecialchars($password, ENT_QUOTES), PASSWORD_ARGON2I); // hash
 
 $bool = FALSE;
 

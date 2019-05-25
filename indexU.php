@@ -6,7 +6,7 @@ echo "Hi " . $_SESSION['name'];
 
 if (!isset($_SESSION['id']) || !isset($_SESSION['login']) )
 {
- //header('Location: index.php');
+ header('Location: index.php');
 }	
 ?>
 
@@ -79,9 +79,9 @@ if (!isset($_SESSION['id']) || !isset($_SESSION['login']) )
                   <a href="#" class="list-group-item list-group-item-action active">
                      Opcje
                   </a>
-                  <a href="#" class="list-group-item list-group-item-action">Kursy</a>
-                  <a href="#" class="list-group-item list-group-item-action">Srursy</a>
-                  <a href="#" class="list-group-item list-group-item-action disabled">Srurursy</a>
+                  <a href="#" class="list-group-item list-group-item-action">Lekcja 1</a>
+                  <a href="#" class="list-group-item list-group-item-action">Lekcja 2</a>
+                  <a href="#" class="list-group-item list-group-item-action disabled">Lekcja 3</a>
                </div>
             </aside>
 

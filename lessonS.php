@@ -1,3 +1,18 @@
+<?php
+
+// session_start();
+// $_SESSION['errorMessage'] = $_SESSION['errorMessage'] ?? "";
+// echo $_SESSION['errorMessage'];
+// echo "Hi " . $_SESSION['name'];
+
+// if (!isset($_SESSION['id']) || !isset($_SESSION['login']) )
+// {
+//  header('Location: index.php');
+// }	
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="pl">
   <head>
@@ -118,17 +133,23 @@
               deserunt accusamus atque non minus assumenda. Voluptatum eius,
               quod corporis voluptas possimus non! Facere aut itaque enim nulla.
 
-              <div class="embed-responsive embed-responsive-16by9 mt-4">
-                <iframe
-                  class="embed-responsive-item"
-                  src="https://www.youtube.com/embed/AZMSAzZ76EU"
-                  allowfullscreen
-                ></iframe>
+              <div class="mt-4 mb-4">
+                <audio controls>
+                  <source
+                    src="http://www.w3schools.com/html/horse.ogg"
+                    type="audio/ogg"
+                  />
+                  <source
+                    src="http://www.w3schools.com/html/horse.mp3"
+                    type="audio/mpeg"
+                  />
+                  <a href="http://www.w3schools.com/html/horse.mp3">horse</a>
+                </audio>
               </div>
             </div>
             <form class="mt-4 mb-4">
+              <h1>Pytanie blbalbalba, blblbla bla ?</h1>
               <div class="form-check form-check-inline ">
-                <h1>Pytanie blbalbalba, blblbla bla ?</h1>
                 <input
                   class="form-check-input"
                   type="radio"
