@@ -5,14 +5,18 @@ $(document).ready(function() {
   var alenght = 0;
   var activeQuestion = 0;
   var loadVariables = 1;
+  var completedTests;
+  var notCompletedTests; // narazie nieuzywana
+  var numberOfDone;
 
   $.ajax({
+    // na start odpytanie createContent.php i pobranie podstawowych danych z serwera
     url: 'createContent.php',
     method: 'post',
     data: {
       load: loadVariables
     },
-    dataType: 'json' //oczekujemy odpowiedzi w formacie json
+    dataType: 'json' //oczekiwana odpowiedz json
   })
     .done(function(response) {
       console.log(response);
@@ -20,18 +24,29 @@ $(document).ready(function() {
       content = response.content;
       correct = response.correct;
       qtext = response.qtext;
+      completedTests = response.testsDone;
+
+      numberOfDone = completedTests.length;
+      var border = alenght - numberOfDone; // pozostalo tyle nie zrobionych
+      console.log(numberOfDone);
 
       var i = 0;
       alenght = response.qtext.length;
       var stringT = '';
+      var strDisabled = '';
 
       var str = $('h1').text(response.qtext[0]); // response.qtext;
 
       while (i < alenght) {
+        if (i >= numberOfDone) {
+          strDisabled = 'disabled';
+        }
         stringT +=
           '<a href="#" id="c' +
           i +
-          '" class="list-group-item list-group-item-action disabled">Lekcja "' +
+          '" class="list-group-item list-group-item-action ' +
+          strDisabled +
+          '">Lekcja "' +
           i +
           '"</a>';
         i++;

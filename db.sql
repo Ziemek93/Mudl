@@ -11,18 +11,6 @@ CREATE TABLE Course(
   Id_k INT(6) NOT NULL PRIMARY KEY AUTO_INCREMENT
   );
 
-  CREATE TABLE Test(
-  Id_ft INT(6) NOT NULL,
-  Done BOOLEAN NOT NULL DEFAULT FALSE,
-  Id_fk INT(6),
-  Id_fu INT(6),
-   FOREIGN KEY (Id_ft) REFERENCES TestQuery (Id_t),
-  FOREIGN KEY (Id_fk) REFERENCES Course (Id_k),
-  FOREIGN KEY (Id_fu) REFERENCES Users (Id_u)
-  );
-
-
-
   CREATE TABLE TestQuery
     (
         Id_t INT(6) NOT NULL PRIMARY KEY AUTO_INCREMENT,
@@ -32,6 +20,18 @@ CREATE TABLE Course(
         Id_fk INT(6),
         FOREIGN KEY (Id_fk) REFERENCES Course (Id_k)
     );
+
+  CREATE TABLE TestDone(
+  Id_ft INT(6) NOT NULL,
+  Id_fk INT(6),
+  Id_fu INT(6),
+   FOREIGN KEY (Id_ft) REFERENCES TestQuery (Id_t),
+  FOREIGN KEY (Id_fk) REFERENCES Course (Id_k),
+  FOREIGN KEY (Id_fu) REFERENCES Users (Id_u)
+  );
+
+
+
 
 
 Insert into  Users
@@ -54,12 +54,12 @@ values
 Insert into  Course
     (ID_k)
 values
-    ('1');
+    (NULL);
 
 Insert into  Course
     (ID_k)
 values
-    ('1');
+    (NULL);
 
 
 Insert into  TestQuery
@@ -83,19 +83,19 @@ values
 
 
 
-Insert into  Test
-    (TestN, Done, Id_fk, Id_fu)
+Insert into  TestDone
+    (Id_ft, Id_fk, Id_fu)
 values
-    ('1', 'FALSE', '1', '1');
+    ('1', '1', '1');
 
-Insert into  Test
-    (TestN, Done, Id_fk, Id_fu)
+Insert into  TestDone
+    (Id_ft, Id_fk, Id_fu)
 values
-    ('1', 'FALSE', '1', '1');
+    ('2', '1', '1');
 
-Insert into  Test
-    (TestN, Done, Id_fk, Id_fu)
+Insert into  TestDone
+    (Id_ft, Id_fk, Id_fu)
 values
-    ('1', 'FALSE', '1', '2');
+    ('3', '1', '2');
 
 
