@@ -3,7 +3,7 @@
 //session_start(); // Zmienic !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 require_once('Connect/connect.php');
 
-$phpError = "PHP gutugut";
+$phpError = "PHP Errors: ";
 $lessonsNumb = 0;
 $course = 1;
 $testsArr;
@@ -91,18 +91,13 @@ function getStats($userId, $course) // sprawdzenie czy porobone sa testy u daneg
 }
 
 
-function setAnswered($id_t)
+
+function setAnswered($id_t, $id_fk, $id_u)
 {
 
-    $testsArr = array(
-        'qtext' => array(),
-        'answer' => array(),
-        'id_t' => array(),
-        'content' => array()
-    );
-
+    global $phpError;
     try {
-        $query = Connect()->prepare("Insert INTO Test ()  (TestN, Done, Id_fk, Id_fu) values (:id_t, 'TRUE', :id_fk, :id_u);");
+        $query = Connect()->prepare("Insert INTO TestDone (Id_ft, Id_fk, Id_fu) values (:id_t, :id_fk, :id_u);");
         $query->bindValue(':id_u', $id_u, PDO::PARAM_INT);
         $query->bindValue(':id_fk', $id_fk, PDO::PARAM_INT);
         $query->bindValue(':id_t', $id_t, PDO::PARAM_INT);
@@ -126,6 +121,17 @@ header("Content-type: application/json");
 // echo $phpError;
 // print_r($dataArr);
 
+// setAnswered(4, $course, $userId);
+// echo $phpError;
+
+if (isset($_POST['SA'])) {
+
+    $id_t = htmlspecialchars($_POST['SA'], ENT_QUOTES);
+
+    setAnswered($id_t, $course, $userId);
+
+    exit;
+}
 
 if (isset($_POST['load'])) {
     getLessons();

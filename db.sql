@@ -65,7 +65,7 @@ values
 Insert into  TestQuery
     (Id_t, QText, Correct, Content, Id_fk)
 values
-    (NULL, 'Piesze pytanie?', '1', 'https://www.youtube.com/embed/t3D9sgyGRrY', '1');
+    (NULL, 'Pieddwdwdsze pytanie?', '1', 'https://www.youtube.com/embed/t3D9sgyGRrY', '1');
  Insert into  TestQuery
     (Id_t, QText, Correct, Content, Id_fk)
 values
@@ -74,12 +74,12 @@ values
     Insert into  TestQuery
     (Id_t, QText, Correct, Content, Id_fk)
 values
-    (NULL, 'Drugie pytanie?', '1', 'https://www.youtube.com//embedCjSNLmb0Ndw', '1');
+    (NULL, 'Drugie pytanie?', '1', 'https://www.youtube.com/embed//C_DYxoOfGRk', '1');
 
     Insert into  TestQuery
     (Id_t, QText, Correct, Content, Id_fk)
 values
-    (NULL, 'Pisze pytanie?', '0', 'https://www.youtube.com//embedCjSNLmb0Ndw', '1');
+    (NULL, 'Piiiiiiiiiiiisze pytanie?', '0', 'https://www.youtube.com/embed/eRiVDekoEQM', '1');
 
 
 

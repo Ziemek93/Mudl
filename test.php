@@ -1,23 +1,71 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
+
 <html lang='pl'>
 
 <head>
-    <meta charset='utf-8' />
-    <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no' />
+
 
     <title>Kurs</title>
     <meta name='description' content='Módlek' />
-    <meta name='keywords' content='kurs, nauka, learning, moodle' />
-    <meta name='author' content='Grzegorz Brzeczyszczykiewicz' />
-    <meta http-equiv='X-Ua-Compatible' content='IE=edge' />
-    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js'></script>
-    <script src='lesson.js'></script>
+    <meta charset='utf-8' />
+    <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no' />
+    <script src='https://code.jquery.com/jquery-3.3.1.slim.min.js' integrity='sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo' crossorigin='anonymous'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js' integrity='sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1' crossorigin='anonymous'></script>
+    <script src='js/bootstrap.min.js'></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src='testj.js'></script>
 
-
+    <title>Your Website</title>
 </head>
 
 <body>
-    <h1>o,o</h1>
+
+    <header>
+        <nav>
+            <ul>
+                <li>Your menu</li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+
+        <article>
+            <div class="xd" id="f">
+                <h1>o,o</h1>
+            </div>
+            <div class="xd" id="i2">
+                <h1>o,o</h1>
+            </div>
+            <div class="xd" id="i3">
+                <h1>o,o</h1>
+            </div>
+            <header>
+                <h2>Article title</h2>
+                <p>Posted on <time datetime="2009-09-04T16:31:24+02:00">September 4th 2009</time> by <a href="#">Writer</a> - <a href="#comments">6 comments</a></p>
+            </header>
+            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+        </article>
+
+        <article>
+            <header>
+                <h2>Article title</h2>
+                <p>Posted on <time datetime="2009-09-04T16:31:24+02:00">September 4th 2009</time> by <a href="#">Writer</a> - <a href="#comments">6 comments</a></p>
+            </header>
+            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+        </article>
+
+    </section>
+
+    <aside>
+        <h2>About section</h2>
+        <p>Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+    </aside>
+
+    <footer>
+        <p>Copyright 2009 Your name</p>
+    </footer>
+
 </body>
 
 </html>

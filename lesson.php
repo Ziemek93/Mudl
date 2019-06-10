@@ -2,11 +2,12 @@
 <html lang='pl'>
 
 <head>
-  <meta charset='utf-8' />
-  <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no' />
+
 
   <title>Kurs</title>
   <meta name='description' content='Módlek' />
+  <meta charset='utf-8' />
+  <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no' />
   <meta name='keywords' content='kurs, nauka, learning, moodle' />
   <meta name='author' content='Grzegorz Brzeczyszczykiewicz' />
   <meta http-equiv='X-Ua-Compatible' content='IE=edge' />
@@ -37,7 +38,7 @@
             <a class='nav-link' href='#'>Contact</a>
           </li>
           <li class='nav-item dropdown'>
-            <a class='nav-link' href='#'>Logout</a>
+            <a class='nav-link' href='logout.php'>Logout</a>
           </li>
         </ul>
 
@@ -61,7 +62,7 @@
               <div class='dropdown-divider'></div>
               <a class='list-group-item list-group-item-action disabled' href='#' type='button'>Kurs 2</a>
             </div>
-            <a href='#' id="c0" class='list-group-item list-group-item-action disabled'>Lekcja 1</a>
+            <div id="c0" class='list-group-item list-group-item-action disabled'>Lekcja 1</div>
           </div>
         </aside>
 
@@ -108,9 +109,11 @@
 
   <script src='https://code.jquery.com/jquery-3.3.1.slim.min.js' integrity='sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo' crossorigin='anonymous'></script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js' integrity='sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1' crossorigin='anonymous'></script>
-  <script src='js/bootstrap.min.js'></script>
-  <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js'></script>
   <script src='lesson.js'></script>
+
+  <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js'></script>
+  <script src='js/bootstrap.min.js'></script>
+
 </body>
 
 </html>
