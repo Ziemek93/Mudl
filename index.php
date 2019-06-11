@@ -49,7 +49,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['login'])) {
                </li>
 
                <li class="nav-item dropdown">
-                  <a class="nav-link" href="#">Contact</a>
+                  <a class="nav-link" href="lesson.php">Course</a>
                </li>
                <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" hrev="#" data-toggle="dropdown" role="button" id="submenu">Sing in</a>

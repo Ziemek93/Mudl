@@ -1,6 +1,6 @@
 <?php
 
-//session_start(); // Zmienic !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+session_start();
 require_once('Connect/connect.php');
 
 $phpError = "PHP Errors: ";
@@ -11,11 +11,13 @@ $userStatsArr;
 $dataArr;
 
 
-$userId = 1; //$_SESSION['id_u']; // WWAZNE zmienic na sesyjna !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+$userId = $_SESSION['id'];
 
 function getLessons()
 {
     global $testsArr, $lessonsNumb, $phpError, $course;
+
+    $userType = $_SESSION['Type'];
 
     $testsArr = array(
         'qtext' => array(),
@@ -25,8 +27,9 @@ function getLessons()
     );
 
     try {
-        $query = Connect()->prepare("SELECT QText, Correct, Content, Id_t FROM TestQuery WHERE Id_fk = :course");
+        $query = Connect()->prepare("SELECT QText, Correct, Content, Id_t FROM TestQuery WHERE Id_fk = :course AND Type = :userType");
         $query->bindValue(':course', $course, PDO::PARAM_INT);
+        $query->bindValue(':userType', $userType, PDO::PARAM_STR);
         $query->execute();
 
         if ($query->rowCount()) {

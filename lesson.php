@@ -1,3 +1,14 @@
+<?php
+session_start();
+$_SESSION['errorMessage'] = $_SESSION['errorMessage'] ?? "";
+echo $_SESSION['errorMessage'];
+echo "Hi " . $_SESSION['name'];
+
+if (!isset($_SESSION['id']) || !isset($_SESSION['login'])) {
+  header('Location: index.php');
+}
+?>
+
 <!DOCTYPE html>
 <html lang='pl'>
 
@@ -31,11 +42,11 @@
       <div class='collapse navbar-collapse' id='mainmenu'>
         <ul class='navbar-nav mr-auto'>
           <li class='nav-item dropdown'>
-            <a class='nav-link' href='#'>Main site</a>
+            <a class='nav-link' href='indexU.php'>Main site</a>
           </li>
 
           <li class='nav-item dropdown'>
-            <a class='nav-link' href='#'>Contact</a>
+            <a class='nav-link' href='#'>Course</a>
           </li>
           <li class='nav-item dropdown'>
             <a class='nav-link' href='logout.php'>Logout</a>

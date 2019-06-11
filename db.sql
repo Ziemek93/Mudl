@@ -18,6 +18,7 @@ CREATE TABLE Course(
         Correct BOOLEAN NOT NULL,
         Content VARCHAR (100) NOT NULL,
         Id_fk INT(6),
+        Type VARCHAR (1) NOT NULL ), -- V S
         FOREIGN KEY (Id_fk) REFERENCES Course (Id_k)
     );
 
@@ -63,23 +64,23 @@ values
 
 
 Insert into  TestQuery
-    (Id_t, QText, Correct, Content, Id_fk)
+    (Id_t, QText, Correct, Content, Id_fk, Type)
 values
-    (NULL, 'Pieddwdwdsze pytanie?', '1', 'https://www.youtube.com/embed/t3D9sgyGRrY', '1');
+    (NULL, 'Pieddwdwdsze pytanie?', '1', 'https://www.youtube.com/embed/t3D9sgyGRrY', '1', 'V');
  Insert into  TestQuery
-    (Id_t, QText, Correct, Content, Id_fk)
+    (Id_t, QText, Correct, Content, Id_fk, Type)
 values
-    (NULL, 'Piesze pytanie?', '1' ,'https://www.youtube.com//embedCjSNLmb0Ndw', '1');
+    (NULL, 'Piesze pytanie?', '1' ,'https://www.youtube.com//embedCjSNLmb0Ndw', '1', 'V');
 
     Insert into  TestQuery
-    (Id_t, QText, Correct, Content, Id_fk)
+    (Id_t, QText, Correct, Content, Id_fk, Type)
 values
-    (NULL, 'Drugie pytanie?', '1', 'https://www.youtube.com/embed//C_DYxoOfGRk', '1');
+    (NULL, 'Drugie pytanie?', '1', 'https://www.youtube.com/embed//C_DYxoOfGRk', '1', 'V');
 
     Insert into  TestQuery
-    (Id_t, QText, Correct, Content, Id_fk)
+    (Id_t, QText, Correct, Content, Id_fk, Type)
 values
-    (NULL, 'Piiiiiiiiiiiisze pytanie?', '0', 'https://www.youtube.com/embed/eRiVDekoEQM', '1');
+    (NULL, 'Piiiiiiiiiiiisze pytanie?', '0', 'https://www.youtube.com/embed/eRiVDekoEQM', '1', 'V');
 
 
 

@@ -4,10 +4,9 @@ $_SESSION['errorMessage'] = $_SESSION['errorMessage'] ?? "";
 echo $_SESSION['errorMessage'];
 echo "Hi " . $_SESSION['name'];
 
-if (!isset($_SESSION['id']) || !isset($_SESSION['login']) )
-{
- header('Location: index.php');
-}	
+if (!isset($_SESSION['id']) || !isset($_SESSION['login'])) {
+   header('Location: index.php');
+}
 ?>
 
 <!DOCTYPE html>
@@ -52,10 +51,10 @@ if (!isset($_SESSION['id']) || !isset($_SESSION['login']) )
                </li>
 
                <li class="nav-item dropdown">
-                  <a class="nav-link" href="#">Contact</a>
+                  <a class="nav-link" href="lesson.php">Course</a>
                </li>
                <li class="nav-item dropdown">
-               <a class="nav-link" href="logout.php">Logout</a>
+                  <a class="nav-link" href="logout.php">Logout</a>
                </li>
             </ul>
 
@@ -74,16 +73,7 @@ if (!isset($_SESSION['id']) || !isset($_SESSION['login']) )
 
          <div class="row">
 
-            <aside class="col-sm-12 col-md-4 ">
-               <div class="list-group">
-                  <a href="#" class="list-group-item list-group-item-action active">
-                     Opcje
-                  </a>
-                  <a href="#" class="list-group-item list-group-item-action">Lekcja 1</a>
-                  <a href="#" class="list-group-item list-group-item-action">Lekcja 2</a>
-                  <a href="#" class="list-group-item list-group-item-action disabled">Lekcja 3</a>
-               </div>
-            </aside>
+
 
             <section class="jumpers col-sm-12 col-md-8">
 
