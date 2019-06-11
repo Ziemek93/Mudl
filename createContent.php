@@ -130,7 +130,10 @@ if (isset($_POST['SA'])) {
 
     setAnswered($id_t, $course, $userId);
 
-    exit;
+
+    print json_encode(
+        $course
+    );
 }
 
 if (isset($_POST['load'])) {

@@ -9,10 +9,12 @@ $(document).ready(function() {
   var notCompletedTests; // narazie nieuzywana
   var numberOfDone;
   var testIdent;
+  var i = 0;
 
   loadAgain();
 
   function loadAgain() {
+    console.log('LOADL AGAN');
     $.ajax({
       // na start odpytanie createContent.php i pobranie podstawowych danych z serwera
       url: 'createContent.php',
@@ -35,12 +37,11 @@ $(document).ready(function() {
         var border = alenght - numberOfDone; // pozostalo tyle nie zrobionych
         console.log(numberOfDone);
 
-        var i = 0;
         alenght = qtext.length;
         var stringT = '';
         var strDisabled = '';
 
-        var str = $('h1').text(qtext[activeQuestion]); // response.qtext;
+        $('h1').text(qtext[activeQuestion]); // response.qtext;
 
         while (i < alenght) {
           if (i > numberOfDone) {
@@ -57,8 +58,8 @@ $(document).ready(function() {
           i++;
         }
 
-        $('#vd').attr('src', response.content[activeQuestion]);
-        $('#c0').replaceWith(stringT);
+        $('#vd').attr('src', content[activeQuestion]); //link
+        $('#c0').replaceWith(stringT); // lessons
       })
       .fail(function(xhr, status, error) {
         console.log(error); // error handling
@@ -80,7 +81,7 @@ $(document).ready(function() {
           url: 'createContent.php',
           method: 'post',
           data: {
-            SA: activeQuestion
+            SA: active
           }
         })
           .done(function(response) {
@@ -90,7 +91,7 @@ $(document).ready(function() {
             loadAgain();
           })
           .fail(function(xhr, status, error) {
-            console.log(error); // error handling
+            console.log(xhr + ' - ' + status + ' - ' + error); // error handling
           });
       }
     } else {
@@ -99,7 +100,7 @@ $(document).ready(function() {
   });
 
   $(document).on('click', '.lesson', function() {
-    alert($(this).attr('id'));
+    //alert($(this).attr('id'));
     activeQuestion = parseInt(
       $(this)
         .attr('id')
@@ -108,6 +109,8 @@ $(document).ready(function() {
     $('#vd').attr('src', content[activeQuestion]);
     $('h1').text(qtext[activeQuestion]);
   });
+
+  function reloadLessons() {}
 
   // $(document)
   //   .change(function() {
