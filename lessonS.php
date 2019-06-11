@@ -191,11 +191,7 @@
 
     <footer class="page-footer font-small blue fixed-bottom ">
       <!-- Copyright -->
-      <div class="footer-copyright text-center py-3">
-        © 2018 Copyright:
-        <a href="https://mdbootstrap.com/education/bootstrap/">
-          mySite.pl © 2018</a
-        >
+      <div class="footer-copyright text-center py-3">© 2019 Copyright: by Sith
       </div>
       <!-- Copyright -->
     </footer>
