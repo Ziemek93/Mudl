@@ -55,11 +55,13 @@ $(document).ready(function() {
             '">Lekcja ' +
             i +
             '</div>';
+
+          console.log('t');
           i++;
         }
 
         $('#vd').attr('src', content[activeQuestion]); //link
-        $('#c0').replaceWith(stringT); // lessons
+        $('#cf').replaceWith(stringT); // lessons
       })
       .fail(function(xhr, status, error) {
         console.log(error); // error handling

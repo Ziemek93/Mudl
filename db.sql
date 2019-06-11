@@ -18,7 +18,7 @@ CREATE TABLE Course(
         Correct BOOLEAN NOT NULL,
         Content VARCHAR (100) NOT NULL,
         Id_fk INT(6),
-        Type VARCHAR (1) NOT NULL ), -- V S
+        Type VARCHAR (1) NOT NULL, -- V S
         FOREIGN KEY (Id_fk) REFERENCES Course (Id_k)
     );
 
@@ -26,7 +26,7 @@ CREATE TABLE Course(
   Id_ft INT(6) NOT NULL,
   Id_fk INT(6),
   Id_fu INT(6),
-   FOREIGN KEY (Id_ft) REFERENCES TestQuery (Id_t),
+  FOREIGN KEY (Id_ft) REFERENCES TestQuery (Id_t),
   FOREIGN KEY (Id_fk) REFERENCES Course (Id_k),
   FOREIGN KEY (Id_fu) REFERENCES Users (Id_u)
   );
@@ -70,12 +70,12 @@ values
  Insert into  TestQuery
     (Id_t, QText, Correct, Content, Id_fk, Type)
 values
-    (NULL, 'Piesze pytanie?', '1' ,'https://www.youtube.com//embedCjSNLmb0Ndw', '1', 'V');
+    (NULL, 'Piesze pytanie?', '1' ,'https://www.youtube.com//embed/CjSNLmb0Ndw', '1', 'V');
 
     Insert into  TestQuery
     (Id_t, QText, Correct, Content, Id_fk, Type)
 values
-    (NULL, 'Drugie pytanie?', '1', 'https://www.youtube.com/embed//C_DYxoOfGRk', '1', 'V');
+    (NULL, 'Drugie pytanie?', '1', 'https://www.youtube.com/embed/C_DYxoOfGRk', '1', 'V');
 
     Insert into  TestQuery
     (Id_t, QText, Correct, Content, Id_fk, Type)
