@@ -7,45 +7,51 @@ var go = function() {
   }
 
   if (
-    (svalues[0].value == 1 &&
-      svalues[1].value == 2 &&
-      svalues[3].value == 2 &&
-      svalues[6].value == 1 &&
-      svalues[7].value == 1 &&
-      svalues[16].value == 1) ||
-    (svalues[2].value == 1 &&
-      svalues[3].value == 1 &&
-      svalues[5].value == 1 &&
-      svalues[8].value == 1 &&
-      svalues[9].value == 2 &&
-      svalues[10].value == 2 &&
-      svalues[11].value == 2 &&
-      svalues[12].value == 1 &&
-      svalues[13].value == 1 &&
-      svalues[14].value == 1 &&
-      svalues[15].value == 2)
+    svalues[0].value == 1 &&
+    svalues[1].value == 2 &&
+    svalues[3].value == 2 &&
+    svalues[6].value == 1 &&
+    svalues[7].value == 1 &&
+    svalues[16].value == 1
   ) {
     document.getElementById('choice').value = 'V';
   } else if (
-    (svalues[2].value == 2 &&
-      svalues[3].value == 2 &&
-      svalues[5].value == 2 &&
-      svalues[8].value == 2 &&
-      svalues[9].value == 1 &&
-      svalues[10].value == 1 &&
-      svalues[11].value == 1 &&
-      svalues[12].value == 2 &&
-      svalues[13].value == 2 &&
-      svalues[14].value == 2 &&
-      svalues[15].value == 1) ||
-    (svalues[0].value == 1 &&
-      svalues[1].value == 1 &&
-      svalues[3].value == 1 &&
-      svalues[6].value == 2 &&
-      svalues[7].value == 2 &&
-      svalues[16].value == 2)
+    svalues[0].value == 1 &&
+    svalues[1].value == 1 &&
+    svalues[3].value == 1 &&
+    svalues[6].value == 2 &&
+    svalues[7].value == 2 &&
+    svalues[16].value == 2
   ) {
     document.getElementById('choice').value = 'S';
+  } else if (
+    svalues[2].value == 2 &&
+    svalues[3].value == 2 &&
+    svalues[5].value == 2 &&
+    svalues[8].value == 2 &&
+    svalues[9].value == 1 &&
+    svalues[10].value == 1 &&
+    svalues[11].value == 1 &&
+    svalues[12].value == 2 &&
+    svalues[13].value == 2 &&
+    svalues[14].value == 2 &&
+    svalues[15].value == 1
+  ) {
+    document.getElementById('choice').value = 'P';
+  } else if (
+    svalues[2].value == 1 &&
+    svalues[3].value == 1 &&
+    svalues[5].value == 1 &&
+    svalues[8].value == 1 &&
+    svalues[9].value == 2 &&
+    svalues[10].value == 2 &&
+    svalues[11].value == 2 &&
+    svalues[12].value == 1 &&
+    svalues[13].value == 1 &&
+    svalues[14].value == 1 &&
+    svalues[15].value == 2
+  ) {
+    document.getElementById('choice').value = 'O';
   } else {
     document.getElementById('choice').value = 'V';
   }
