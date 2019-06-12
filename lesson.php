@@ -73,7 +73,7 @@ if (!isset($_SESSION['id']) || !isset($_SESSION['login'])) {
               <div class='dropdown-divider'></div>
               <a class='list-group-item list-group-item-action disabled' href='#' type='button'>Kurs 2</a>
             </div>
-            <div id="c0" class='list-group-item list-group-item-action disabled'>Lekcja 1</div>
+            <div id="cf" class='list-group-item list-group-item-action disabled'>Lekcja 1</div>
           </div>
         </aside>
 
