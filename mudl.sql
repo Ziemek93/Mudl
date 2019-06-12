@@ -32,10 +32,6 @@ CREATE TABLE `course` (
   `Id_k` int(6) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Zrzut danych tabeli `course`
---
-
 INSERT INTO `course` (`Id_k`) VALUES
 (1),
 (2);
